@@ -9,25 +9,8 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-/**
-    <#Changed#>   - Loại bỏ các value chưa 'Main', Dùng để khởi tạo với UIVC bằng Giao diện thông qua file info.plist
- */
-
-    // Khai báo "Điều phối viên"
-    var coordinator: MainCoordinator?
-    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // Init và truyền para theo protocol
-        let navigationController = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navigationController)
-        coordinator?.start()
-        
-        // Gán lại kích thước màn hình và hiển thị
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
         
         return true
     }
